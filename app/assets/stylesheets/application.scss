@@ -16,3 +16,35 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption|Raleway|Ubuntu');
+
+$navbar-bg-color: #d2d2d2;
+$navbar-color: #333;
+$navbar-color-hvr: #0a0a0a;
+
+.my-nav {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px $navbar-color;
+  width: 100%;
+  height: 50px;
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    .navbar-item {
+      color: $navbar-color;
+      transition: .3s ease-in-out;
+      font-size: 20px;
+      margin: 7px;
+      &:hover {
+        transform: scale(1.01);
+        color: $navbar-color-hvr;
+        text-decoration: none;
+      }
+      &.title {
+        font-family: 'PT Sans Caption', sans-serif;
+        transform: scale(1.5);
+      }
+    }
+  }
+}
