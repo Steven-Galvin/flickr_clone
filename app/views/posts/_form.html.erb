@@ -1,0 +1,13 @@
+<%= render "layouts/errors", :object => @post %>
+
+<%= form_for [@user, @post] do |f| %>
+  <div class="field">
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+  </div>
+  <%= f.label :caption %><br>
+  <%= f.text_field :caption %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
