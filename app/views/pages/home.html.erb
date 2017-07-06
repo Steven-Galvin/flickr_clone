@@ -2,6 +2,15 @@
 
 <h4><%= "Pixl is a photo sharing social platform designed with the user in mind! With the ability to share photos with your peers and leave comments back and forth, Pixl is a great way to connect with people around the world! If you have an account, sign in above. If you don't have an account, sign up " if !current_user %><%= link_to "here", new_user_registration_path if !current_user %><%= " and get to sharin'!" if !current_user %></h4>
 
-<%= link_to "All Posts", posts_path(current_user) %>
-<%= link_to "Add New Post", new_post_path(current_user) %>
-<h2><%= "Feed" if current_user %></h2>
+
+  <%= link_to "All Posts", posts_path %>
+  <%= link_to "Add New Post", new_post_path %>
+    <h2>Feed</h2>
+    <div class="posts">
+      <% @posts.each do |post| %>
+        <div class="post">
+          <%= image_tag(post.picture) %>
+          <span class="post-user"><%= post.user.username %></span> <span class="post-caption"><%= post.caption %></span>
+        </div>
+      <% end %>
+    </div>

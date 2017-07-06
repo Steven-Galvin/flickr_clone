@@ -105,3 +105,22 @@ a {
     }
   }
 }
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  .post {
+    border: 1px solid $navbar-color;
+    flex-basis: 30%;
+    margin: 10px;
+    img {
+      width: 100%;
+    }
+    .post-caption {
+      color: $navbar-color;
+    }
+    .post-user {
+      font-weight: bold;
+    }
+  }
+}

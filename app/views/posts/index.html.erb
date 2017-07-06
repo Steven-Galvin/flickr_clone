@@ -1,3 +1,8 @@
-<% current_user.posts.each do |post| %>
-  <%= image_tag(post.picture) %>
-<% end %>
+<div class="posts">
+  <% current_user.posts.each do |post| %>
+    <div class="post">
+      <%= image_tag(post.picture) %>
+      <span class="post-user"><%= current_user.username %></span> <span class="post-caption"><%= post.caption %></span>
+    </div>
+  <% end %>
+</div>
