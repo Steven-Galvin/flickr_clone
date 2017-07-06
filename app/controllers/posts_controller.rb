@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user = session[:user_id]
+    @user = current_user
     @post = @user.posts.new(post_params)
     if @post.save
     flash[:notice] = "Post successfully added!"
