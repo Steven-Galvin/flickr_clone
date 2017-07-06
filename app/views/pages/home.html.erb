@@ -1,7 +1,7 @@
-<h3><%= current_user.email if current_user %></h3>
+<h3><%= "Welcome to Pixl!" if !current_user %></h3>
 
-<h3><%= current_user.username if current_user %></h3>
+<h4><%= "Pixl is a photo sharing social platform designed with the user in mind! With the ability to share photos with your peers and leave comments back and forth, Pixl is a great way to connect with people around the world! If you have an account, sign in above. If you don't have an account, sign up " if !current_user %><%= link_to "here", new_user_registration_path if !current_user %><%= " and get to sharin'!" if !current_user %></h4>
 
-<%= link_to "Login", new_user_session_path  if !current_user %>
-<%= link_to "Sign Up", new_user_registration_path if !current_user %>
-<%= link_to "Log Out", destroy_user_session_path, method: :delete if current_user %>
+
+<h2><%= "Feed" if current_user %></h2>
+<%= image_tag(current_user.avatar.url(:thumb)) if current_user %>

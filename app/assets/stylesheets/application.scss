@@ -31,20 +31,50 @@ $navbar-color-hvr: #0a0a0a;
   .container {
     display: flex;
     justify-content: flex-end;
-    .navbar-item {
-      color: $navbar-color;
-      transition: .3s ease-in-out;
+    .navbar-user {
+      color: navy;
+      padding: 7px;
       font-size: 20px;
-      margin: 7px;
-      &:hover {
-        transform: scale(1.01);
-        color: $navbar-color-hvr;
+    }
+    .navbar-item {
+      font-size: 20px;
+      padding: 7px;
+      align-self: center;
+      a {
+        color: $navbar-color;
         text-decoration: none;
+        display: inline-block;
+        transition: all .3s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+          // color: $navbar-color-hvr;
+          color: lightblue;
+          letter-spacing: 1px;
+        }
       }
-      &.title {
-        font-family: 'PT Sans Caption', sans-serif;
-        transform: scale(1.5);
+    }
+    .navbar-title {
+      font-size: 30px;
+      align-self: center;
+      margin-right: auto;
+      font-family: 'PT Sans Caption', sans-serif;
+      a {
+        display: inline-block;
+        color: $navbar-color;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+          color: lightblue;
+          letter-spacing: 1px;
+        }
       }
+    }
+    .navbar-flash {
+      color: maroon;
+      font-size: 15px;
+      align-self: center;
+      padding: 7px;
     }
   }
 }
